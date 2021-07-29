@@ -68,5 +68,5 @@ jobs:
                 docker-compose -f docker-compose.cypress.yml up -d backend frontend mock-auth
                 sleep 5
             displayName: "Start services"
-          - script: docker-compose -f docker-compose.cypress.yml up cypress
+          - script: docker-compose -f docker-compose.cypress.yml up
             displayName: "Run Cypress tests"
