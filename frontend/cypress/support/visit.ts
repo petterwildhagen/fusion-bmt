@@ -28,27 +28,27 @@ function waitForEvaluationPageLoad() {
 Cypress.Commands.add('visitProject', (user: User, fusionProjectId: string = '123') => {
     setupEnvironment()
     cy.login(user)
-    const port = Cypress.env('FRONTEND_PORT') || '3000'
+    const frontend_url = Cypress.env('FRONTEND_URL') || 'http://frontend:3000'
 
-    cy.visit(`http://localhost:${port}`)
+    cy.visit(`${frontend_url}`)
     waitForFusionPageLoad()
 
-    cy.visit(`http://localhost:${port}/${fusionProjectId}`)
+    cy.visit(`${frontend_url}/${fusionProjectId}`)
     waitForProjectPageLoad()
 })
 
 Cypress.Commands.add('visitEvaluation', (evaluationId: string, user: User, fusionProjectId: string = '123') => {
     setupEnvironment()
     cy.login(user)
-    const port = Cypress.env('FRONTEND_PORT') || '3000'
+    const frontend_url = Cypress.env('FRONTEND_URL') || 'http://frontend:3000'
 
-    cy.visit(`http://localhost:${port}`)
+    cy.visit(`${frontend_url}`)
     waitForFusionPageLoad()
 
-    cy.visit(`http://localhost:${port}/${fusionProjectId}`)
+    cy.visit(`${frontend_url}/${fusionProjectId}`)
     waitForProjectPageLoad()
 
-    cy.visit(`http://localhost:${port}/${fusionProjectId}/evaluation/${evaluationId}`)
+    cy.visit(`${frontend_url}/${fusionProjectId}/evaluation/${evaluationId}`)
     waitForEvaluationPageLoad()
 })
 

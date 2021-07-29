@@ -5,7 +5,6 @@ import ProjectPage from '../support/project'
 import NominationPage from '../support/nomination'
 import users from '../support/users'
 
-
 describe('Sample tests', () => {
     beforeEach(() => {
         cy.visitProject(users[0])
@@ -42,4 +41,3 @@ describe('Sample tests', () => {
         })
     })
 })
-
