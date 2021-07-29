@@ -1,0 +1,15 @@
+﻿{
+  "profiles": {
+    "api": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "applicationUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ApplicationInsights__InstrumentationKey": "6f08fb54-d348-44cb-9fa6-be2c9e29d419",
+        "AzureAd__ClientSecret": "",
+        "Database__ConnectionString": ""
+      }
+    }
+  }
+}
